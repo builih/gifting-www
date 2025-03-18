@@ -2,30 +2,127 @@
 
 <html>
   <head>
-    <title>HTML Skeleton</title>
+    <title>Analog & Digital Circuits</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no" />
     <style>
-      /* You can put any CSS styles here */
       img {
         max-width: 100%;
+      }
+
+      @font-face {
+        font-family: "Pixelify_Sans";
+        src: url("assets/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf") format("truetype");
+      }
+
+      body {
+        background-image: url("assets/pages_bg.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        font-family: "Pixelify_Sans";
+      }
+
+      .button {
+        background-color:#E0FFFE;
+        border: none;
+        color: white;
+        padding: 6px 12px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
+
+      .button2{
+        background-color:#0A1C3F;
+        color: #114284;
+        border: 2px solid #114284;
+        font-family: "Pixelify_Sans";
+        border-radius: 10px;
+        padding: 1px 115px;
+      }
+
+      .button:hover {
+        background-color: #E0FFFE;
+        color: #214C98;
+      }
+
+      .wrapper {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 400px 400px 300px;
+        color:#e0fffe30;
+        width: 1100px;
+        margin: 0 auto;
+      }
+
+      .box {
+        background-color: #e0fffe30;
+        color: #E0FFFE;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 150%;
+
+      }
+
+      .a {
+        grid-column: 1 / span 2;
+      }
+      .b {
+        grid-column: 3 ;
+        grid-row: 1 / span 2;
+      }
+      .c {
+        grid-column: 1 ;
+        grid-row: 2 ;
+      }
+      .d {
+        grid-column: 2 ;
+        grid-row: 2 ;
+      }
+
+      @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+
+        50% {
+          opacity: 0.25;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .blinking-text {
+        animation: blink 2s infinite;
       }
     </style>
   </head>
 
-  <body style="background-color:rgb(25, 25, 25)">
-    <!-- You can put your HTML here -->
+  <body>
+    <a href="about" class="button button2" style="text-align:center;font-size:x-large;position: absolute;top: 25px;left: 200px;">ABOUT</a><br/>
+    <a href="index" class="button button2" style="text-align:center;font-size:x-large;position: absolute;top: 25px;left: 600px;">DASHBOARD</a><br/>
+    <a href="rot" class="button button2" style="text-align:center;font-size:x-large;position: absolute;top: 25px;left: 1050px;padding: 1px 85px;">SCREEN ROT</a><br/>
+      
     <br/>
     <br/>
-    <div style="text-align: center;">    
-      <img src="https://i.pinimg.com/736x/af/27/ed/af27edf060daae13ad17689cabe1ee7a.jpg" alt="Stark Arc Reactor" style="width:300px">
-    </div>
-    <h1 style="color:white;text-align:center;font-size:xx-large">Welcome to <i>Analog and Digital Circuits</i></h1>
-    <p style="color:yellow;text-align:center;font-size:xx-large">&#x1F5F2; &#x1F5F2; &#x1F5F2; &#x1F5F2; &#x1F5F2;</p>
-    
-    <div style="text-align: center;">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/y-lWarLUhfg?si=UrF5C8YEHVjEgJFs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/jis1MC5Tm8k?si=QkL5cQMCu-mEUecS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="wrapper">
+      <div class="box a">
+        <h1 style="color:white;text-align:center;font-size:xx-large">Welcome to <div class="blinking-text"><i>Analog and Digital Circuits</i></div></h1>
+      </div>
+      <div class="box b" style="text-align: center;"></br>Analog and Digital Circuits involve designing and analyzing electronic systems, with analog circuits processing continuous signals and digital circuits handling discrete binary data for modern devices.</div>
+      <div class="box c" style="text-align: center;">
+        <iframe width="350" height="225" src="https://www.youtube.com/embed/y-lWarLUhfg?si=UrF5C8YEHVjEgJFs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="box d" style="text-align: center;">
+        <iframe width="350" height="225" src="https://www.youtube.com/embed/jis1MC5Tm8k?si=QkL5cQMCu-mEUecS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </div>
   </body>
 </html>
