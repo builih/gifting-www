@@ -8,7 +8,6 @@
 	<style>
 		.canvas {
 			background: #d13b2c;
-			position: relative;
 		}
 		.apple {
 			height: 100px;
@@ -23,12 +22,13 @@
 		.vase {
 			height: 300px;
 			width: 200px;
-			background: rgba(255, 255, 255, 0.5);
+			/* : rgba(255, 255, 255, 0.5);*/
 			position: absolute;
 			bottom: 123px;
 			left: 378px;
 			border-right: 2px solid white;
-			border-left: 3px solid white;
+			border-left: 2px solid white;
+			z-index: 1;
 		}
 		.vase-bottom {
 			height: 85px;
@@ -37,7 +37,7 @@
 			position: absolute;
 			bottom: -42px;
 			border-radius: 50%;
-			border-bottom: 2px solide white;
+			border-bottom: 2px solid white;
 		}
 		.vase-top {
 			height: 85px;
@@ -50,7 +50,7 @@
 		.flower {
 			height: 400px;
 			width: 50px;
-			border: 1px solid lime;
+			/* border: 1px solid lime;*/
 			transform: rotate(-15deg);
 			position: absolute;
 			bottom: 0;
@@ -68,7 +68,8 @@
 		.petals {
 			height: 50px;
 			width: 125px;
-			background: yellow;
+			/* background: yellow;*/
+			/* border: 1px solid yellow;*/
 			border-radius: 50%;
 			position: absolute;
 			top: -34px;
@@ -76,16 +77,41 @@
 		}
 		.petal {
 			background: yellow;
-			height: 50px;
+			height: 90px;
 			width: 10px;
 			border-radius: 50%;
 			position: absolute;
 			transform: rotate(-66deg);
-			left: 34px;
+			left: 18px;
 			bottom: -12px;
 		}
+		.petal.two {
+        	transform: rotate(-88deg);
+        	bottom: -28px;
+      	}
+      	.petal.three {
+        	transform: rotate(-100deg);
+        	bottom: -40px;
+      	}
+      	.petal.four {
+        	transform: rotate(-180deg);
+        	bottom: 9px;
+        	left: 59px;
+      	}
+      	.petal.five {
+        	transform: rotate(-220deg);
+        	bottom: 6px;
+        	left: 33px;
+      	}
 		.ruler {
-			background: linear-gradient(90deg, rgba(184,) );
+			/*background: silver;*/
+			background: linear-gradient(90deg, rgba(184, 184, 184, 1) 0%, rgba(77, 77, 77, 1) 100%);
+			width: 601px;
+        	height: 20px;
+        	position: absolute;
+        	bottom: 193px;
+        	left: 50px;
+        	transform: rotate(-20deg) skew(40deg);
 		}
 		.plate {
 			height: 68px;
@@ -93,14 +119,18 @@
 			background: rgba(255, 255, 255, 0.5);
 			border-radius: 50%;
 			position: absolute;
+			top: 200px;
+			right: 57px;
+			z-index: 1;
+			border: 2px solid white;
 		}
 		.cake {
 			width: 0;
 			height: 0;
 			border-top: 50px solid transparent;
 			border-bottom: 50px solid transparent;
-			border-left: 128 solid #954d11;
-			transform: rotate(160def);
+			border-left: 128px solid #954d11;
+			transform: rotate(160deg);
 			position: absolute;
 			bottom: 0;
 			left: 18px;
@@ -115,6 +145,7 @@
 		}
 		.flame {
 			background: yellow;
+			opacity: 0.5;
 			height: 30px;
 			width: 16px;
 			border-radius: 50%;
@@ -165,10 +196,11 @@
 			</div>
 		</div>
 		<div class="ruler"></div>
-		<div class="cake"></div>
-		<div class="candle"></div>
-		<div class="flame"></div>
-
+		<div class="plate">
+			<div class="cake"></div>
+			<div class="candle"></div>
+			<div class="flame"></div>
+		</div>
 	</div>
   </div>
 
